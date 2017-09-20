@@ -61,10 +61,10 @@ if ((answer5 === 'y') || (answer5 === 'yes')) {
 // question 6
 var attemptNum = 1;
 while (attemptNum < 6) {
-  var answer6 = prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \n Pick a number.');
+  var answer6 = prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \nPick a number.');
   console.log('The user\'s question 6 guess #' + attemptNum + ' is ' + answer6);
   if (answer6 < 13) {
-    alert('I lived there longer than that! You have ' + (5 - attemptNum) + 'tries left.');
+    alert('I lived there longer than that! You have ' + (5 - attemptNum) + ' guess(es) left.');
     attemptNum++;
   } else if (answer6 > 13) {
     alert('No, I didn\'t live there that long. You have ' + (5 - attemptNum) + ' guess(es) left.');
@@ -81,6 +81,7 @@ if (attemptNum > 10) {
   alert('You Lose. :\'(');
   console.log('The user failed to guess question 6 correctly.');
 }
+
 
 // question 7
 var ansArr = ['holland', 'the netherlands', 'netherlands', 'belgium', 'france'];
