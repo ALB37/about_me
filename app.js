@@ -56,3 +56,57 @@ if ((answer5 === 'y') || (answer5 === 'yes')) {
 } else {
   alert('But I do!');
 }
+
+
+// question 6
+var attemptNum = 1;
+while (attemptNum < 6) {
+  var answer6 = prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \n Pick a number.');
+  console.log('The user\'s question 6 guess #' + attemptNum + ' is ' + answer6);
+  if (answer6 < 13) {
+    alert('I lived there longer than that! You have ' + (5 - attemptNum) + 'tries left.');
+    attemptNum++;
+  } else if (answer6 > 13) {
+    alert('No, I didn\'t live there that long. You have ' + (5 - attemptNum) + ' guess(es) left.');
+    attemptNum++;
+  } else {
+    alert('That\'s right! I lived in New Orleans for 13 years. You guessed in only ' + attemptNum + ' attempt(s). Good job!');
+    attemptNum += 10;
+  }
+}
+if (attemptNum > 10) {
+  alert('You Win!');
+  console.log('The user guessed question 6 correctly in ' + (attemptNum - 10) + ' attempt(s).' );
+} else {
+  alert('You Lose. :\'(');
+  console.log('The user failed to guess question 6 correctly.');
+}
+
+// question 7
+var ansArr = ['holland', 'the netherlands', 'netherlands', 'belgium', 'france'];
+var guessNum = 1;
+var solved = false;
+alert('I\'m going to give you 6 chances to guess the following question:');
+while (guessNum < 7) {
+  var answer7 = prompt('Can you guess a country I have visited outside of North America?').toLowerCase();
+  console.log('The user\'s question 7 guess #' + guessNum + ' is ' + answer7);
+  for (var i = 0; i < ansArr.length; i++) {
+    var q = ansArr[i];
+    if (q === answer7) {
+      alert('You guessed correctly! And you did it in only ' + guessNum + ' guess(es)!');
+      guessNum += 10;
+      solved = true;
+    }
+  }
+  if (solved === false) {
+    alert('Nice try, but I\'ve never been there before. You have ' + (6 - guessNum) + ' guess(es) left.');
+    guessNum++;
+  }
+}
+if (guessNum > 10) {
+  alert('You win!');
+  console.log('User guessed question 7 correctly in ' + (guessNum - 10) + ' guess(es).');
+} else {
+  alert('Bummer, you lost.');
+  console.log('The user failed to guess question 7 correctly.');
+}
