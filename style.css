@@ -1,3 +1,37 @@
 * {
-  color: red;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-family: courier;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  font-family: sans-serif;
+}
+
+h1, h2 {
+  color: rgb(158, 31, 31);
+}
+
+ul {
+  text-align: center;
+}
+
+div {
+  position: relative;
+  display: inline-block;
+}
+
+div.left-block {
+  float: right;
+  display: inline;
+  width: 50%;
+  position: relative;
+}
+
+div.right-block {
+  float: left;
+  display: inline;
+  width: 50%;
+  position: relative;
 }
