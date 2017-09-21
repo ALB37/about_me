@@ -1,23 +1,38 @@
 'use strict';
+var userName = '';
 
-var userName = prompt('Thanks for checking out my "About Me" page. What\'s your name?');
-console.log('User\'s name is ' + userName);
+function user() {
+  userName = prompt('Thanks for checking out my "About Me" page. What\'s your name?');
+  console.log('User\'s name is ' + userName);
+  alert('Hi, ' + userName + ', nice to meet you. See if you can guess some things about me.');
+}
+user();
+//console.log(userName);
 
-alert('Hi, ' + userName + ', nice to meet you. See if you can guess some things about me.');
-
+// var x = 3;
+// var y = 4;
+//
+// function check(i,j) {
+//   return i * j;
+// }
+// //check(x,y);
+// alert(check(x,y));
 var totalRight = 0;
 
 // question 1
-var answer1 = prompt('Do I have 2 cats?').toLowerCase();
-console.log('The user\'s first answer is ' + answer1 + '. The correct answer is yes.');
-if ((answer1 === 'y') || (answer1 === 'yes')) {
-  // Tell the user they got the correct answer
-  alert('That\'s right!');
-  totalRight++;
-} else {
-  // Tell the user they got the wrong answer
-  alert('Actually, I do!');
+function question1() {
+  var answer1 = prompt('Do I have 2 cats?').toLowerCase();
+  console.log('The user\'s first answer is ' + answer1 + '. The correct answer is yes.');
+  if ((answer1 === 'y') || (answer1 === 'yes')) {
+    // Tell the user they got the correct answer
+    alert('That\'s right!');
+    totalRight++;
+  } else {
+    // Tell the user they got the wrong answer
+    alert('Actually, I do!');
+  }
 }
+question1();
 
 
 // question 2
@@ -64,7 +79,7 @@ if ((answer5 === 'y') || (answer5 === 'yes')) {
 }
 
 
-// question 6
+question 6
 alert('Let\'s play a number guessing game!');
 var attemptNum = 1;
 while (attemptNum < 6) {
