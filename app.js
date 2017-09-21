@@ -116,13 +116,14 @@ while (guessNum < 7) {
   }
 }
 if (guessNum > 10) {
-  alert('You win!');
+  alert('You win! I\'ve visited The Netherlands, Belgium and France.');
   console.log('User guessed question 7 correctly in ' + (guessNum - 10) + ' guess(es).');
   totalRight++;
 } else {
-  alert('Bummer, you lost.');
+  alert('Bummer, you lost. I\'ve been to The Netherlands, Belgium and France.');
   console.log('The user failed to guess question 7 correctly.');
 }
+
 
 // Declaration of total right answers
 alert('Of all 7 questions I asked, you got ' + totalRight + ' questions correct.');
