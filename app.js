@@ -36,50 +36,61 @@ question1();
 
 
 // question 2
-var answer2 = prompt('Do I have a son?').toLowerCase();
-console.log('The user\'s second answer is ' + answer2 + '. The correct answer is no.');
-if ((answer2 === 'n') || (answer2 === 'no')) {
-  alert('Correct, I do have a daughter though! Her name is Aurora and she is 2.');
-  totalRight++;
-} else {
-  alert('Nope, but I do have a daughter.');
+function question2() {
+  var answer2 = prompt('Do I have a son?').toLowerCase();
+  console.log('The user\'s second answer is ' + answer2 + '. The correct answer is no.');
+  if ((answer2 === 'n') || (answer2 === 'no')) {
+    alert('Correct, I do have a daughter though! Her name is Aurora and she is 2.');
+    totalRight++;
+  } else {
+    alert('Nope, but I do have a daughter.');
+  }
 }
+question2();
 
 
 // question 3
-var answer3 = prompt('Was I born in Seattle?').toLowerCase();
-console.log('The user\'s third answer is ' + answer3 + '. The correct answer is no.');
-if ((answer3 === 'n') || (answer3 === 'no')) {
-  alert('That\'s right! I was born in New Orleans.');
-  totalRight++;
-} else {
-  alert('Actually, I was born in New Orleans.');
+function question3() {
+  var answer3 = prompt('Was I born in Seattle?').toLowerCase();
+  console.log('The user\'s third answer is ' + answer3 + '. The correct answer is no.');
+  if ((answer3 === 'n') || (answer3 === 'no')) {
+    alert('That\'s right! I was born in New Orleans.');
+    totalRight++;
+  } else {
+    alert('Actually, I was born in New Orleans.');
+  }
 }
+question3();
 
 
 // question 4
-var answer4 = prompt('Am I interested in analog photography?').toLowerCase();
-console.log('The user\'s fourth answer is ' + answer4 + '. The correct answer is yes.');
-if ((answer4 === 'y') || (answer4 === 'yes')) {
-  alert('You betcha! I love shooting some film. Also like shooting digital too though! I love all sorts of photography.');
-  totalRight++;
-} else {
-  alert('Actually, I think film is a really cool medium. The chemistry of photography is fascinating.');
+function question4() {
+  var answer4 = prompt('Am I interested in analog photography?').toLowerCase();
+  console.log('The user\'s fourth answer is ' + answer4 + '. The correct answer is yes.');
+  if ((answer4 === 'y') || (answer4 === 'yes')) {
+    alert('You betcha! I love shooting some film. Also like shooting digital too though! I love all sorts of photography.');
+    totalRight++;
+  } else {
+    alert('Actually, I think film is a really cool medium. The chemistry of photography is fascinating.');
+  }
 }
-
+question4();
 
 // question 5
-var answer5 = prompt('Do I have an interest in synthesizers?').toLowerCase();
-console.log('The user\'s fifth answer is ' + answer5 + '. The correct answer is yes.');
-if ((answer5 === 'y') || (answer5 === 'yes')) {
-  alert('Totally! Synthesizers are the coolest. I\'d love to build a modular system someday.');
-  totalRight++;
-} else {
-  alert('But I do!');
+function question5() {
+  var answer5 = prompt('Do I have an interest in synthesizers?').toLowerCase();
+  console.log('The user\'s fifth answer is ' + answer5 + '. The correct answer is yes.');
+  if ((answer5 === 'y') || (answer5 === 'yes')) {
+    alert('Totally! Synthesizers are the coolest. I\'d love to build a modular system someday.');
+    totalRight++;
+  } else {
+    alert('But I do!');
+  }
 }
+question5();
 
 
-question 6
+//question 6  
 alert('Let\'s play a number guessing game!');
 var attemptNum = 1;
 while (attemptNum < 6) {
