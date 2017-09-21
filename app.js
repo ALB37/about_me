@@ -65,6 +65,7 @@ if ((answer5 === 'y') || (answer5 === 'yes')) {
 
 
 // question 6
+alert('Let\'s play a number guessing game!');
 var attemptNum = 1;
 while (attemptNum < 6) {
   var answer6 = prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \nPick a number.');
@@ -94,7 +95,7 @@ if (attemptNum > 10) {
 var ansArr = ['holland', 'the netherlands', 'netherlands', 'belgium', 'france'];
 var guessNum = 1;
 var solved = false;
-alert('I\'m going to give you 6 chances to guess the following question:');
+alert('Let\'s play another game. I\'m going to give you 6 chances to guess the following question:');
 while (guessNum < 7) {
   var answer7 = prompt('Can you guess a country I have visited outside of North America?').toLowerCase();
   console.log('The user\'s question 7 guess #' + guessNum + ' is ' + answer7);
