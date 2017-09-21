@@ -68,9 +68,12 @@ if ((answer5 === 'y') || (answer5 === 'yes')) {
 alert('Let\'s play a number guessing game!');
 var attemptNum = 1;
 while (attemptNum < 6) {
-  var answer6 = prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \nPick a number.');
+  var answer6 = parseInt(prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \nPick a number.'));
   console.log('The user\'s question 6 guess #' + attemptNum + ' is ' + answer6);
-  if (answer6 < 13) {
+  if (answer6 === NaN) {
+    alert('Come on, gimme a number, not that garbage! I\'m dinging you a guess for that.');
+    attemptNum++;
+  } else if (answer6 < 13) {
     alert('I lived there longer than that! You have ' + (5 - attemptNum) + ' guess(es) left.');
     attemptNum++;
   } else if (answer6 > 13) {
@@ -86,7 +89,7 @@ if (attemptNum > 10) {
   console.log('The user guessed question 6 correctly in ' + (attemptNum - 10) + ' attempt(s).' );
   totalRight++;
 } else {
-  alert('You Lose. :\'(');
+  alert('You Lose. :\'( I lived in New Orleans for 13 years.');
   console.log('The user failed to guess question 6 correctly.');
 }
 
