@@ -5,7 +5,7 @@ var totalRight = 0;
 var userName = '';
 
 
-//Greeting
+// Greeting
 function user() {
   userName = prompt('Thanks for checking out my "About Me" page. What\'s your name?');
   console.log('User\'s name is ' + userName);
@@ -13,43 +13,49 @@ function user() {
 }
 user();
 
-var qArr = ['Do I have 2 cats?',
-  'Do I have a son?',
-  'Was I born in Seattle?',
-  'Am I interested in analog photography?',
-  'Do I have an interest in synthesizers?'];
+function game1(){
+  var qArr = ['Do I have 2 cats?',
+    'Do I have a son?',
+    'Was I born in Seattle?',
+    'Am I interested in analog photography?',
+    'Do I have an interest in synthesizers?'];
 
-var aArr = ['y', 'n', 'n', 'y', 'y'];
+  var aArr = ['y', 'n', 'n', 'y', 'y'];
 
-var cRArr = ['That\'s right!',
-  'Correct, I do have a daughter though! Her name is Aurora and she is 2.',
-  'That\'s right! I was born in New Orleans.',
-  'You betcha! I love shooting some film. Also like shooting digital too though! I love all sorts of photography.',
-  'Totally! Synthesizers are the coolest. I\'d love to build a modular system someday.'];
+  var cRArr = ['That\'s right!',
+    'Correct, I do have a daughter though! Her name is Aurora and she is 2.',
+    'That\'s right! I was born in New Orleans.',
+    'You betcha! I love shooting some film. Also like shooting digital too though! I love all sorts of photography.',
+    'Totally! Synthesizers are the coolest. I\'d love to build a modular system someday.'];
 
-var iRArr = ['Actually, I do!',
-  'I don\'t, but I do have a daughter.',
-  'Actually, I was born in New Orleans.',
-  'Actually, I think film is a really cool medium. The chemistry of photography is fascinating.',
-  'But I do!'];
+  var iRArr = ['Actually, I do!',
+    'I don\'t, but I do have a daughter.',
+    'Actually, I was born in New Orleans.',
+    'Actually, I think film is a really cool medium. The chemistry of photography is fascinating.',
+    'But I do!'];
 
 
-for (var i = 0; i < qArr.length; i++){
-  var a = prompt(qArr[i]).toLowerCase();
-  if (a === ('yes' || 'y')){
-    a = 'y';
-  } else if (a === ('no' || 'n')){
-    a = 'n';
-  } else {
-    alert('That\'s not valid input! Just give me a yes or a no!');
-  }
-  if (a === aArr[i]) {
-    alert(cRArr[i]);
-    totalRight++;
-  } else {
-    alert(iRArr[i]);
+  for (var i = 0; i < qArr.length; i++){
+    var a = prompt(qArr[i]).toLowerCase();
+    if (a === ('yes' || 'y')){
+      a = 'y';
+    } else if (a === ('no' || 'n')){
+      a = 'n';
+    } else {
+      alert('That\'s not valid input! Just give me a yes or a no! I gave you a chance. I\'m counting that as the wrong answer now!');
+    }
+    if (a === aArr[i]) {
+      alert(cRArr[i]);
+      totalRight++;
+    } else {
+      alert(iRArr[i]);
+    }
   }
 }
+
+
+//OLD CODE
+
 
 // question 1
 // function question1() {
@@ -124,13 +130,13 @@ for (var i = 0; i < qArr.length; i++){
 
 
 //question 6
-function question6() {
+function game2() {
   alert('Let\'s play a number guessing game!');
   var attemptNum = 1;
   while (attemptNum < 6) {
     var answer6 = parseInt(prompt('I\'m going to give you 5 tries to guess how many years I lived in New Orleans before moving to Washington. \nPick a number.'));
     console.log('The user\'s question 6 guess #' + attemptNum + ' is ' + answer6);
-    if (answer6 === NaN) {
+    if (answer6.toString() === 'NaN') {
       alert('Come on, gimme a number, not that garbage! I\'m dinging you a guess for that.');
       attemptNum++;
     } else if (answer6 < 13) {
@@ -153,11 +159,11 @@ function question6() {
     console.log('The user failed to guess question 6 correctly.');
   }
 }
-question6();
+// question6();
 
 
 // question 7
-function question7() {
+function game3() {
   var ansArr = ['holland', 'the netherlands', 'netherlands', 'belgium', 'france'];
   var guessNum = 1;
   var solved = false;
@@ -187,7 +193,7 @@ function question7() {
     console.log('The user failed to guess question 7 correctly.');
   }
 }
-question7();
+// question7();
 
 
 // Declaration of total right answers
@@ -198,8 +204,8 @@ function declaration(){
   }
 }
 
-// for (var qNum = 1; qNum < 8; qNum++) {
-//   eval('question' + qNum + '()');
-// }
+for (var qNum = 1; qNum < 4; qNum++) {
+  eval('game' + qNum + '()');
+}
 
 declaration();
